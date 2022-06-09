@@ -1,5 +1,5 @@
 
-#how to use:
+# how to use
 
 0. put the 'modify_creatives.py' file into the main folder of your creative pack (e. g. \bigbox_2020-06-01). Open the folder with a text editor. The exaple code after "#YOUR CODE HERE" can be replaced with your own.
 1. create a pattern you want to replace using regex(good site for writing and testing regex: https://regexr.com/). Split the pattern in 3 capturing groups using () symbols. Second capturing group should contain the value which will be modified. 
@@ -12,7 +12,7 @@
 
 The program should be run from the main pack directory (e. g. '\bigbox_2020-06-01').
 
-#examples
+# examples
 
 Code from examples should be inserted after "#YOUR CODE HERE" in the python file.
 Examples are in test mode, remove the "True" argument from modifyCreatives() and run to save the changes.
