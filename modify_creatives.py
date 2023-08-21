@@ -23,9 +23,9 @@ def replaceText(file, pattern, transformation, test):
 # applies [transformation] on every occurence of [pattern] in [filename] files for all subfolders
 def modifyCreatives(pattern, transformation, filename='settings.json', test=False):
     for folder in subfolders:
-        file_exists = os.path.exists(folder+'\\'+filename)
+        file_exists = os.path.exists(folder+'/'+filename)
         if file_exists:
-            replaceText(folder+'\\' + filename, pattern, transformation, test)
+            replaceText(folder+'/' + filename, pattern, transformation, test)
     print("finished replacing", pattern)
     if test: print("Test mode active, no files have been changed.")
     if not test: print("FILES MODIFIED")
@@ -36,6 +36,6 @@ def modifyCreatives(pattern, transformation, filename='settings.json', test=Fals
 query1 = '(.offer-enlarger-name\s*>\s*p\s*span\s*{[\n]?\s*font-size:\s*)(\d\d?)(px)'
 # transformations to be applied to the number
 def transformation1(number):
-    return round(number*1.3)
+    return round(number*1.2)
 #function call
-modifyCreatives(query1, transformation1, 'css\style.css', test=True)
+modifyCreatives(query1, transformation1, 'css/style.css', test=True)
